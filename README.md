@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://cdn.sophiebot.online/publico/github/bannersophie.png" alt="Banner da Sophie Chan" width="100%">
+  <img src="https://cdn.sophiebot.online/publico/github/bannersophie" alt="Banner da Sophie Chan" width="100%">
 
   <h1>Sophie Chan</h1>
   <p><strong>Um projeto de economia para Discord construído como produto, não apenas como uma coleção de comandos.</strong></p>
@@ -46,9 +46,9 @@ Este repositório representa meu trabalho na criação do produto, da experiênc
   </tr>
 </table>
 
-## Stack
-
 <div align="center">
+
+<h2 id="stack">Stack</h2>
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
@@ -61,17 +61,25 @@ Este repositório representa meu trabalho na criação do produto, da experiênc
 
 </div>
 
-| Camada | Tecnologias e responsabilidades |
-| --- | --- |
-| Aplicação | TypeScript, Node.js e Discord.js v14 |
-| Interface | Slash commands, modais, seletores, botões e Components V2 |
-| Dados | PostgreSQL, Prisma Client, repositórios e armazenamento estruturado |
-| Concorrência | Operações atômicas, locks por usuário e modo single-writer |
-| Escala | ShardingManager, serviços de runtime e tarefas em background |
-| Processamento | Worker threads para canvas, ranking, pesca, fazenda e perfil |
-| Performance | Cache em memória, Redis, deduplicação de tarefas e prewarm |
-| Observabilidade | Winston, métricas de workers, tempo de resposta e logs por categoria |
-| Assets | Cloudflare R2 servido por CDN próprio |
+<table align="center">
+  <thead>
+    <tr>
+      <th align="center" width="180">Camada</th>
+      <th align="center" width="560">Tecnologias e responsabilidades</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td align="center">Aplicação</td><td>TypeScript, Node.js e Discord.js v14</td></tr>
+    <tr><td align="center">Interface</td><td>Slash commands, modais, seletores, botões e Components V2</td></tr>
+    <tr><td align="center">Dados</td><td>PostgreSQL, Prisma Client, repositórios e armazenamento estruturado</td></tr>
+    <tr><td align="center">Concorrência</td><td>Operações atômicas, locks por usuário e modo single-writer</td></tr>
+    <tr><td align="center">Escala</td><td>ShardingManager, serviços de runtime e tarefas em background</td></tr>
+    <tr><td align="center">Processamento</td><td>Worker threads para canvas, ranking, pesca, fazenda e perfil</td></tr>
+    <tr><td align="center">Performance</td><td>Cache em memória, Redis, deduplicação de tarefas e prewarm</td></tr>
+    <tr><td align="center">Observabilidade</td><td>Winston, métricas de workers, tempo de resposta e logs por categoria</td></tr>
+    <tr><td align="center">Assets</td><td>Cloudflare R2 servido por CDN próprio</td></tr>
+  </tbody>
+</table>
 
 ## O problema que eu quis resolver
 
@@ -236,5 +244,4 @@ O código-fonte é privado. Este README funciona como apresentação pública do
 
   <br><br>
 
-  <img src="https://cdn.sophiebot.online/publico/github/Powered%20By%20PlayHub.png" alt="Powered by PlayHub" width="150">
-</div>
+  <img src="https://img.shields.io/badge/Powered%20by-Grupo%20PlayHub-5865F2?style=for-the-badge" alt="Powered by Grupo PlayHub">
