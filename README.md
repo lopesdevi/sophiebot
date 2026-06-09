@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://cdn.sophiebot.online/publico/github/bannersophie.png" alt="Banner da Sophie Chan" width="100%">
+  <img src="https://cdn.sophiebot.online/publico/github/Bordas%20Arredondas.png" alt="Banner da Sophie Chan" width="100%">
 
   <h1>Sophie Chan</h1>
   <p><strong>Um projeto de economia para Discord construído como produto, não apenas como uma coleção de comandos.</strong></p>
@@ -233,4 +233,8 @@ O código-fonte é privado. Este README funciona como apresentação pública do
   <a href="https://discord.com/oauth2/authorize?client_id=1438639133437198390"><strong>Adicionar a Sophie Chan</strong></a>
   &nbsp;&nbsp; | &nbsp;&nbsp;
   <a href="https://discord.gg/9h8AMGb6NC"><strong>Entrar na comunidade</strong></a>
+
+  <br><br>
+
+  <img src="https://cdn.sophiebot.online/publico/github/Powered%20By%20PlayHub.png" alt="Powered by PlayHub" width="150">
 </div>
