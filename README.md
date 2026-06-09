@@ -12,6 +12,19 @@
   </a>
 </div>
 
+> [!NOTE]
+> A Sophie Chan é um projeto proprietário e de código fechado. Este repositório apresenta o produto, os sistemas desenvolvidos e as decisões de engenharia, sem disponibilizar o código-fonte.
+
+## Navegação
+
+| | |
+| --- | --- |
+| [O projeto](#o-projeto) | [Stack](#stack) |
+| [O problema que eu quis resolver](#o-problema-que-eu-quis-resolver) | [Sistemas de destaque](#sistemas-de-destaque) |
+| [Arquitetura](#arquitetura) | [Decisões de engenharia](#decisões-de-engenharia) |
+| [Experiência dentro do Discord](#experiência-dentro-do-discord) | [Aprendizados](#o-que-este-projeto-me-permitiu-desenvolver) |
+| [Status](#status) | [Conheça a Sophie](#conheça-a-sophie) |
+
 ## O projeto
 
 A Sophie Chan nasceu como um bot de economia e evoluiu para um projeto focado em progressão, retenção e sistemas que conversam entre si. A proposta é evitar o ciclo comum de executar um comando, receber moedas e repetir a mesma ação alguns minutos depois.
@@ -20,9 +33,18 @@ Cada parte da economia deixa consequências em outras áreas. Empresas geram rec
 
 Este repositório representa meu trabalho na criação do produto, da experiência dentro do Discord e da estrutura necessária para manter uma economia persistente funcionando.
 
-<div align="center">
-  <img src="https://cdn.sophiebot.online/publico/github/sophiecard.png" alt="Sophie Chan" width="620">
-</div>
+<table align="center">
+  <tr>
+    <td align="center" width="50%">
+      <img src="https://cdn.sophiebot.online/publico/github/sophiecard.png" alt="Sophie Chan" width="300"><br>
+      <sub>Identidade visual criada para acompanhar a experiência do produto.</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="https://cdn.sophiebot.online/publico/github/sophieholdgen.png" alt="Sophie Chan" width="230"><br>
+      <sub>Um projeto desenvolvido e mantido de forma independente.</sub>
+    </td>
+  </tr>
+</table>
 
 ## Stack
 
@@ -65,39 +87,57 @@ Essa escolha mudou a forma como os recursos foram implementados. Em vez de coman
 
 ## Sistemas de destaque
 
-### Economia persistente
+<details open>
+<summary><strong>Economia persistente</strong></summary>
 
 Perfis, saldos, bancos, inventários, cooldowns, progressão e movimentações permanecem salvos no PostgreSQL. Alterações sensíveis utilizam mutações atômicas e locks para reduzir duplicações e conflitos durante operações concorrentes.
 
-### Empresas com progressão própria
+</details>
+
+<details open>
+<summary><strong>Empresas com progressão própria</strong></summary>
 
 Empresas possuem setores, funcionários, caixa, reserva, reputação, contratos, operações, melhorias e valor de mercado. O crescimento depende das decisões do jogador e não apenas do tempo decorrido.
 
 Contratos rápidos oferecem uma rota ativa para levantar capital. Funcionários e expansões alteram a capacidade operacional, o lucro por hora e o valuation. Operações ilegais podem melhorar resultados no curto prazo, mas aumentam o risco fiscal.
 
-### Governo e investigações
+</details>
+
+<details>
+<summary><strong>Governo e investigações</strong></summary>
 
 O sistema governamental conecta atividades econômicas que antes seriam isoladas. Ele administra impostos, patrimônio, multas, Tesouro Nacional, Polícia Civil e Receita Federal.
 
 Investigações consideram eventos reais da conta, como roubos recentes, dinheiro sujo, movimentações empresariais, sonegação e reincidência. O jogador responde etapas interativas e pode ter valores apreendidos, empresas bloqueadas ou sofrer outras penalidades.
 
-### Roubos e lavagem de dinheiro
+</details>
+
+<details>
+<summary><strong>Roubos e lavagem de dinheiro</strong></summary>
 
 Roubos foram estruturados como experiências interativas com equipe, risco, fases e consequências. O sucesso não encerra necessariamente o evento: evidências podem abrir uma janela de investigação durante o cooldown.
 
 A lavagem de dinheiro possui rotas próprias, diálogos e risco de traição. Empresas também podem ser utilizadas como parte dessa economia paralela.
 
-### Perfis renderizados
+</details>
+
+<details>
+<summary><strong>Perfis renderizados</strong></summary>
 
 O comando de perfil gera cartões personalizados com avatar, display name do servidor, Premium, saldo, nível, XP, reputação, biografia, skins e insignias.
 
 A renderização acontece em worker threads para não bloquear o processamento dos comandos. Fontes e imagens são empacotadas com o projeto, enquanto resultados e assets reutilizados passam por cache.
 
-### Recompensas e retenção
+</details>
+
+<details>
+<summary><strong>Recompensas e retenção</strong></summary>
 
 O projeto possui recompensas diárias, streaks, caixas, drops raros, missões e progressão. Os painéis fixos utilizam IDs persistentes, então continuam funcionais após reinicializações do bot.
 
 As tabelas de drop incluem recompensas comuns e resultados realmente raros, como Premium temporário, sem transformar o sistema em uma fonte descontrolada de dinheiro.
+
+</details>
 
 ## Arquitetura
 
@@ -154,9 +194,9 @@ A interface utiliza os próprios recursos do Discord como parte do produto. Bot�
 | Apostas | `/blackjack`, `/poker`, `/mines`, `/aviator`, `/caraoucoroa` |
 | Administração | Moderação, autorole, anúncios e painéis configuráveis |
 
-<div align="center">
-  <img src="https://cdn.sophiebot.online/publico/github/sophiecool.png" alt="Sophie Chan" width="360">
-</div>
+<p align="center">
+  <img src="https://cdn.sophiebot.online/publico/github/sophiecool.png" alt="Sophie Chan" width="220">
+</p>
 
 ## O que este projeto me permitiu desenvolver
 
@@ -173,14 +213,24 @@ O maior desafio não foi criar muitos comandos. Foi fazer com que eles parecesse
 
 A Sophie continua em desenvolvimento ativo. Sistemas existentes recebem ajustes de economia, melhorias de interface e novas integrações antes da inclusão de novas rotas de progressão.
 
-Este README apresenta o projeto e suas decisões principais. O código-fonte público será organizado separadamente com documentação própria.
+O código-fonte é privado. Este README funciona como apresentação pública do projeto, registro das decisões tomadas e case do trabalho realizado.
+
+## Conheça a Sophie
+
+<table align="center">
+  <tr>
+    <td align="center" width="180">
+      <img src="https://cdn.sophiebot.online/publico/github/sophiechill.png" alt="Sophie Chan" width="150">
+    </td>
+    <td>
+      <strong>O projeto pode ser conhecido diretamente pelo Discord.</strong><br><br>
+      Adicione a Sophie ao seu servidor para explorar os sistemas ou entre na comunidade para acompanhar o desenvolvimento.
+    </td>
+  </tr>
+</table>
 
 <div align="center">
-  <img src="https://cdn.sophiebot.online/publico/github/sophiechill.png" alt="Sophie Chan" width="300">
-
-  <h3>Conheça o projeto funcionando</h3>
-
   <a href="https://discord.com/oauth2/authorize?client_id=1438639133437198390"><strong>Adicionar a Sophie Chan</strong></a>
-  &nbsp;&nbsp;•&nbsp;&nbsp;
+  &nbsp;&nbsp; | &nbsp;&nbsp;
   <a href="https://discord.gg/9h8AMGb6NC"><strong>Entrar na comunidade</strong></a>
 </div>
