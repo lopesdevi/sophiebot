@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://cdn.sophiebot.online/publico/github/Bordas%20Arredondas.png" alt="Banner da Sophie Chan" width="100%">
+  <img src="https://cdn.sophiebot.online/publico/github/bannersophie.png" alt="Banner da Sophie Chan" width="100%">
 
   <h1>Sophie Chan</h1>
   <p><strong>Um projeto de economia para Discord construído como produto, não apenas como uma coleção de comandos.</strong></p>
